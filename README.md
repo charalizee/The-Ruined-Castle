@@ -11,6 +11,9 @@ Determined to find the treasure, you step inside the castle and begin your adven
 **Will you be the first to uncover the secrets of the ruined castle and find the Azure Latch?**
 
 
+## How to play
+
+You don't need to download or install anything extra to play the game. All the necessary files are imported automatically, so you can simply open the Jupyter Notebook and run the game.
 ## Authors
 
 - [@charalizee](https://github.com/charalizee) - The entire game and all its content and story
