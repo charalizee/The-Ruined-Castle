@@ -152,7 +152,7 @@ def ruined_castle_look():
         inventory.append("Sword")
         show_inventory()
         ruined_castle_enter()
-    elif sword_chance < 5:
+    else:
         print("You didn't find anything worthwhile.")
         ruined_castle_enter()
 
@@ -480,7 +480,6 @@ def waterfall():
 
 
 def shed():
-    visited["shed_visited"] = True
     print("\nYou walk towards a broken down shed.")
     print("You step inside and find a key on the table")
     print("Pick it up?")
@@ -493,6 +492,7 @@ def shed():
         show_inventory()
         print("You leave the old shed and go back to the start of the cave.")
         print("\n")
+        visited["shed_visited"] = True
     elif choice == "2":
         print("You chose not to pick up the key.")
         print("You leave the old shed and go back to the start of the cave.")
