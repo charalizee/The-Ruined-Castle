@@ -87,7 +87,7 @@ def valid_ask(valid_choices):
 def player_death():
     if health <= 0:
         print_colored("You died!", style="bold", color="red")
-        #playsound("c:\\Users\\Tobias\\Desktop\\Python\\JDSherbert - Pixel Game Essentials SFX Pack (FREE)\\Stereo\\mp3\\JDSherbert - Pixel Game Essentials SFX Pack - Die 2.mp3")
+        input("\nPress Enter to exit the game...")
         return True
     return False
 
@@ -149,6 +149,10 @@ def sudo_install_opsec(): #main funkce, neboli start
     #    print("Invalid choice. Please choose 1 or 2.")
     #    udelal jsem funkci, ktera to cely vyresila takze jsem to proste dal pryc
 
+def start_game():
+    sudo_install_opsec()
+
+
 def ruined_castle_look():
     print("\nYou decided to look around the castle.")
     sword_chance = random.randint(1,5)
@@ -199,7 +203,6 @@ def staircase():
 
 
 def right_door():
-    global health
     print("\nYou have entered the right door.")
     print("The room is surrounded in complete darkness, walk forward?")
     print("1) Yes")
@@ -316,7 +319,7 @@ def ruined_castle_enter_crystal():
         right_door()
 
 def left_door_end():
-    global ruby_crystal_obtained, health, max_health
+    global health, max_health
     print("\nYou walk past the remains of the skeletons.")
     print("You walk into a huge cave, you can't see anything.")
     if ruby_crystal_obtained == True:
@@ -519,6 +522,7 @@ def ruined_king_bossfight():
             if ruined_king_health <= 0:
                 print_colored("\nYou defeated the Ruined King! Hooray!", style="bold", color="yellow")
                 print_colored("\nYou have completed the game! Congratulations!", style="bold", color="yellow")
+                input("\nPress Enter to exit the game...")
                 break
             health -= 20
             print_colored("\nThe Ruined King attacks with pure anger, dealing 20 damage!", color="green")
@@ -543,4 +547,4 @@ def ruined_king_bossfight():
                 print_colored("\nMaybe consider looking around for more items.", style="bold", color="red")
                 break
 
-sudo_install_opsec()
+start_game()
