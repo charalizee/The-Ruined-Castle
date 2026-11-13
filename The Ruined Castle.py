@@ -71,7 +71,7 @@ skeleton_duo_health = 50
 skeleton_dmg = 12
 
 def ask():
-    choice = input("What do you want to do?")
+    choice = input("What do you want to do?\n>")
     return choice
 
 def valid_ask(valid_choices):
